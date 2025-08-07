@@ -196,7 +196,22 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true });</script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+            'primaryColor': '#34495e',       
+            'primaryBorderColor': '#acb1f7', 
+            'primaryTextColor': '#d1d8e0',  
+            'lineColor': '#f5f9aa',          
+            'secondaryColor': '#acb1f7',     
+            'secondaryBorderColor': '#acb1f7', 
+            'tertiaryColor': '#34495e',     
+            'tertiaryBorderColor': '#acb1f7' 
+        }
+    });
+</script>
 
 </body>
 </html>
