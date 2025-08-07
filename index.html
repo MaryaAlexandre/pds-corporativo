@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Ágil PDS Corporativo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #ecf0f1; /* Cinza bem claro */
+            background-color: #34495e; /* Azul escuro vibrante */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px 40px;
+            background-color: #2c3e50; /* Azul escuro quase preto */
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db; /* Azul vibrante */
+        }
+        h1 {
+            color: #1abc9c; /* Verde água vibrante */
+            font-size: 2.5em;
+        }
+        h2 {
+            color: #1abc9c; /* Verde água vibrante */
+            border-bottom: 1px solid #3498db; /* Azul vibrante */
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .mermaid {
+            margin: 20px 0;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #f39c12; /* Laranja vibrante */
+        }
+        .activity-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .activity-description {
+            margin-left: 20px;
+            font-style: italic;
+            color: #bdc3c7; /* Cinza claro */
+        }
+        .role-item {
+            border-left: 3px solid #e67e22; /* Laranja escuro */
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .role-item p {
+            margin: 5px 0;
+        }
+        .practice-list li {
+            background-color: #34495e; /* Azul escuro */
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #3498db; /* Azul vibrante */
+            transition: transform 0.2s;
+        }
+        .practice-list li:hover {
+            transform: translateY(-3px);
+            background-color: #3b536b; /* Um tom um pouco mais claro */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Processo Ágil de Desenvolvimento de Software</h1>
+        <p>Um roteiro flexível para os projetos <strong>TaSeguro</strong> e <strong>RN sem Fila</strong>.</p>
+    </header>
+
+    ---
+
+    <h2>1. Diagrama de Atividades (Ciclo de Vida)</h2>
+    <p>Este diagrama ilustra o fluxo cíclico do nosso processo, que se repete a cada Sprint, garantindo entregas contínuas e incrementais.</p>
+    <div class="mermaid">
+        graph TD
+            A[Início do Projeto] --> B(Planejamento da Sprint);
+            B --> C(Execução da Sprint);
+            C --> D(Revisão da Sprint);
+            D --> E(Retrospectiva da Sprint);
+            E --> F{Próxima Sprint?};
+            F --> |Sim| B;
+            F --> |Não| G(Finalização do Projeto);
+    </div>
+
+    ---
+
+    <h2>2. Descrição de Cada Atividade</h2>
+    <ul>
+        <li class="activity-item">
+            <strong>Início do Projeto</strong>
+            <div class="activity-description">O <strong>Product Owner (PO)</strong> define a visão do produto e cria um <strong>Product Backlog</strong> inicial, priorizando funcionalidades como a padronização de formulários para o TaSeguro ou a listagem de postos de saúde para o RN sem Fila.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Planejamento da Sprint</strong>
+            <div class="activity-description">A equipe inteira se reúne para decidir o que será desenvolvido na próxima Sprint, criando o <strong>Sprint Backlog</strong>, que são as tarefas detalhadas.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Execução da Sprint</strong>
+            <div class="activity-description">O time de desenvolvimento trabalha nas tarefas, com comunicação constante para garantir o progresso e a qualidade.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Gerência</strong>
+            <div class="activity-description">Atividade contínua onde o <strong>Scrum Master (SM)</strong> remove impedimentos e o <strong>PO</strong> mantém o <strong>Product Backlog</strong> organizado e priorizado.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Testes</strong>
+            <div class="activity-description">A qualidade é responsabilidade de todos. Os testes são integrados ao desenvolvimento e não são uma fase separada.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Implantação</strong>
+            <div class="activity-description">O produto, já testado e validado, é entregue. Pode ser a liberação de uma nova funcionalidade ou a demonstração para os <strong>stakeholders</strong>.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Revisão da Sprint</strong>
+            <div class="activity-description">A equipe demonstra o trabalho concluído aos stakeholders para receber feedback e validar o que foi feito.</div>
+        </li>
+        <li class="activity-item">
+            <strong>Retrospectiva da Sprint</strong>
+            <div class="activity-description">A equipe reflete sobre o processo da Sprint, discutindo o que funcionou e o que pode ser melhorado para o próximo ciclo.</div>
+        </li>
+    </ul>
+
+    ---
+
+    <h2>3. Papéis e Associações às Atividades</h2>
+    <ul>
+        <li class="role-item">
+            <strong>Product Owner (PO)</strong>
+            <p><strong>Responsabilidades:</strong> Maximizar o valor do produto, gerenciar o Product Backlog e definir as prioridades.</p>
+            <p><strong>Atividades Associadas:</strong> Início do Projeto, Planejamento da Sprint e Revisão da Sprint.</p>
+        </li>
+        <li class="role-item">
+            <strong>Scrum Master (SM)</strong>
+            <p><strong>Responsabilidades:</strong> Garantir que a equipe siga o processo Scrum, remover impedimentos e facilitar as reuniões.</p>
+            <p><strong>Atividades Associadas:</strong> Atua como guia em todas as atividades do ciclo.</p>
+        </li>
+        <li class="role-item">
+            <strong>Time de Desenvolvimento</strong>
+            <p><strong>Responsabilidades:</strong> Construir o incremento de produto funcional a cada Sprint, com foco em qualidade.</p>
+            <p><strong>Atividades Associadas:</strong> Planejamento da Sprint, Execução da Sprint, Testes, Implantação, Revisão da Sprint e Retrospectiva da Sprint.</p>
+        </li>
+    </ul>
+
+    ---
+
+    <h2>4. Práticas Ágeis Aplicadas</h2>
+    <ul class="practice-list">
+        <li><strong>Planning Poker:</strong> Técnica de estimativa de esforço usada no <strong>Planejamento da Sprint</strong>.</li>
+        <li><strong>Definition of Ready (DoR) & Definition of Done (DoD):</strong> Critérios para garantir que as tarefas estão prontas para começar (DoR) e realmente concluídas (DoD), incluindo os testes.</li>
+        <li><strong>Daily Scrum:</strong> Reunião diária de 15 minutos na <strong>Execução da Sprint</strong> para sincronizar o progresso.</li>
+        <li><strong>Kanban Board:</strong> Um quadro visual para acompanhar o fluxo de trabalho durante a <strong>Execução da Sprint</strong>.</li>
+        <li><strong>Test-Driven Development (TDD):</strong> Prática de escrever testes antes do código de produção, essencial para a qualidade nos <strong>Testes</strong>.</li>
+        <li><strong>Continuous Integration/Continuous Delivery (CI/CD):</strong> Automação de testes e implantação, garantindo entregas contínuas em <strong>Testes</strong> e <strong>Implantação</strong>.</li>
+        <li><strong>Backlog Refinement:</strong> Atividade contínua de <strong>Gerência</strong> para refinar os itens do Product Backlog para futuras Sprints.</li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+
+</body>
+</html>
