@@ -8,8 +8,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #ecf0f1; /* Cinza bem claro */
-            background-color: #34495e; /* Azul escuro vibrante */
+            color: #d1d8e0; /* Cinza claro suave */
+            background-color: #2c3e50; /* Azul escuro elegante */
             margin: 0;
             padding: 0;
         }
@@ -17,22 +17,21 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 20px 40px;
-            background-color: #2c3e50; /* Azul escuro quase preto */
+            background-color: #34495e; /* Azul escuro um pouco mais claro */
             border-radius: 8px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         header {
             text-align: center;
             padding-bottom: 20px;
-            border-bottom: 2px solid #3498db; /* Azul vibrante */
         }
         h1 {
-            color: #1abc9c; /* Verde água vibrante */
+            color: #55acee; /* Azul Twitter vibrante */
             font-size: 2.5em;
         }
         h2 {
-            color: #1abc9c; /* Verde água vibrante */
-            border-bottom: 1px solid #3498db; /* Azul vibrante */
+            color: #55acee; /* Azul Twitter vibrante */
+            border-bottom: 1px solid #4a6681; /* Azul discreto */
             padding-bottom: 10px;
             margin-top: 30px;
         }
@@ -48,19 +47,22 @@
             margin-bottom: 15px;
         }
         strong {
-            color: #f39c12; /* Laranja vibrante */
+            color: #f1c40f; /* Amarelo vibrante */
+        }
+        .activity-item {
+            margin-bottom: 20px;
         }
         .activity-item strong {
-            display: block;
-            margin-bottom: 5px;
+            display: inline;
+            margin-right: 5px;
         }
         .activity-description {
-            margin-left: 20px;
+            display: inline;
             font-style: italic;
-            color: #bdc3c7; /* Cinza claro */
+            color: #aeb9c6;
         }
         .role-item {
-            border-left: 3px solid #e67e22; /* Laranja escuro */
+            border-left: 3px solid #f1c40f; /* Amarelo vibrante */
             padding-left: 15px;
             margin-bottom: 20px;
         }
@@ -68,15 +70,21 @@
             margin: 5px 0;
         }
         .practice-list li {
-            background-color: #34495e; /* Azul escuro */
+            background-color: #3b5066; /* Azul um pouco mais claro */
             border-radius: 5px;
             padding: 10px;
-            border: 1px solid #3498db; /* Azul vibrante */
+            border: 1px solid #4a6681;
             transition: transform 0.2s;
         }
         .practice-list li:hover {
             transform: translateY(-3px);
-            background-color: #3b536b; /* Um tom um pouco mais claro */
+            background-color: #4a6681;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #4a6681;
+            margin: 30px 0;
         }
     </style>
 </head>
@@ -86,9 +94,10 @@
     <header>
         <h1>Processo Ágil de Desenvolvimento de Software</h1>
         <p>Um roteiro flexível para os projetos <strong>TaSeguro</strong> e <strong>RN sem Fila</strong>.</p>
+        <p>Este documento define um processo de desenvolvimento ágil fundamentado no framework <strong>Scrum</strong>, garantindo a entrega de produtos de alta qualidade de forma eficiente, consistente e previsível. Ele serve como um roteiro, alinhando as expectativas da equipe e otimizando o uso de recursos para atender às necessidades do mercado e dos stakeholders.</p>
     </header>
 
-    ---
+    <hr>
 
     <h2>1. Diagrama de Atividades (Ciclo de Vida)</h2>
     <p>Este diagrama ilustra o fluxo cíclico do nosso processo, que se repete a cada Sprint, garantindo entregas contínuas e incrementais.</p>
@@ -103,45 +112,45 @@
             F --> |Não| G(Finalização do Projeto);
     </div>
 
-    ---
+    <hr>
 
     <h2>2. Descrição de Cada Atividade</h2>
     <ul>
         <li class="activity-item">
-            <strong>Início do Projeto</strong>
-            <div class="activity-description">O <strong>Product Owner (PO)</strong> define a visão do produto e cria um <strong>Product Backlog</strong> inicial, priorizando funcionalidades como a padronização de formulários para o TaSeguro ou a listagem de postos de saúde para o RN sem Fila.</div>
+            <strong>Início do Projeto:</strong>
+            <span class="activity-description">O <strong>Product Owner (PO)</strong> define a visão do produto e cria um <strong>Product Backlog</strong> inicial, priorizando funcionalidades como a padronização de formulários para o TaSeguro ou a listagem de postos de saúde para o RN sem Fila.</span>
         </li>
         <li class="activity-item">
-            <strong>Planejamento da Sprint</strong>
-            <div class="activity-description">A equipe inteira se reúne para decidir o que será desenvolvido na próxima Sprint, criando o <strong>Sprint Backlog</strong>, que são as tarefas detalhadas.</div>
+            <strong>Planejamento da Sprint:</strong>
+            <span class="activity-description">A equipe inteira se reúne para decidir o que será desenvolvido na próxima Sprint, criando o <strong>Sprint Backlog</strong>, que são as tarefas detalhadas.</span>
         </li>
         <li class="activity-item">
-            <strong>Execução da Sprint</strong>
-            <div class="activity-description">O time de desenvolvimento trabalha nas tarefas, com comunicação constante para garantir o progresso e a qualidade.</div>
+            <strong>Execução da Sprint:</strong>
+            <span class="activity-description">O time de desenvolvimento trabalha nas tarefas, com comunicação constante para garantir o progresso e a qualidade.</span>
         </li>
         <li class="activity-item">
-            <strong>Gerência</strong>
-            <div class="activity-description">Atividade contínua onde o <strong>Scrum Master (SM)</strong> remove impedimentos e o <strong>PO</strong> mantém o <strong>Product Backlog</strong> organizado e priorizado.</div>
+            <strong>Gerência:</strong>
+            <span class="activity-description">Atividade contínua onde o <strong>Scrum Master (SM)</strong> remove impedimentos e o <strong>PO</strong> mantém o <strong>Product Backlog</strong> organizado e priorizado.</span>
         </li>
         <li class="activity-item">
-            <strong>Testes</strong>
-            <div class="activity-description">A qualidade é responsabilidade de todos. Os testes são integrados ao desenvolvimento e não são uma fase separada.</div>
+            <strong>Testes:</strong>
+            <span class="activity-description">A qualidade é responsabilidade de todos. Os testes são integrados ao desenvolvimento e não são uma fase separada.</span>
         </li>
         <li class="activity-item">
-            <strong>Implantação</strong>
-            <div class="activity-description">O produto, já testado e validado, é entregue. Pode ser a liberação de uma nova funcionalidade ou a demonstração para os <strong>stakeholders</strong>.</div>
+            <strong>Implantação:</strong>
+            <span class="activity-description">O produto, já testado e validado, é entregue. Pode ser a liberação de uma nova funcionalidade ou a demonstração para os <strong>stakeholders</strong>.</span>
         </li>
         <li class="activity-item">
-            <strong>Revisão da Sprint</strong>
-            <div class="activity-description">A equipe demonstra o trabalho concluído aos stakeholders para receber feedback e validar o que foi feito.</div>
+            <strong>Revisão da Sprint:</strong>
+            <span class="activity-description">A equipe demonstra o trabalho concluído aos stakeholders para receber feedback e validar o que foi feito.</span>
         </li>
         <li class="activity-item">
-            <strong>Retrospectiva da Sprint</strong>
-            <div class="activity-description">A equipe reflete sobre o processo da Sprint, discutindo o que funcionou e o que pode ser melhorado para o próximo ciclo.</div>
+            <strong>Retrospectiva da Sprint:</strong>
+            <span class="activity-description">A equipe reflete sobre o processo da Sprint, discutindo o que funcionou e o que pode ser melhorado para o próximo ciclo.</span>
         </li>
     </ul>
 
-    ---
+    <hr>
 
     <h2>3. Papéis e Associações às Atividades</h2>
     <ul>
@@ -162,7 +171,7 @@
         </li>
     </ul>
 
-    ---
+    <hr>
 
     <h2>4. Práticas Ágeis Aplicadas</h2>
     <ul class="practice-list">
